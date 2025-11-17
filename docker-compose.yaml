@@ -31,7 +31,7 @@ services:
 #нет ssl
   3x-ui:
     image: metaligh/3x-ui:latest
-    container_name: 3x-ui
+#    container_name: 3x-ui
     hostname: djkhgvkjsrvjks.duckdns.org
     volumes:
       - $PWD/db/:/etc/x-ui/
