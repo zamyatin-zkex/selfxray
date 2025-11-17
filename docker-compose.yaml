@@ -34,27 +34,27 @@ services:
     network_mode: host
     restart: unless-stopped
 
-
-  ssl-proxy:
-    image: valian/docker-nginx-auto-ssl
-    restart: on-failure
-    ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - ssl_data:/etc/resty-auto-ssl
-    environment:
-      ALLOWED_DOMAINS: 'djkhgvkjsrvjks.duckdns.org'
-      SITES: 'djkhgvkjsrvjks.duckdns.org=site:80'
-
-  site:
-    image: nginx
-
-volumes:
-  ssl_data:
-
-networks:
-  selfxray:
-    driver:  bridge
-    enable_ipv6: false
-
+#
+#  ssl-proxy:
+#    image: valian/docker-nginx-auto-ssl
+#    restart: on-failure
+#    ports:
+#      - 80:80
+#      - 443:443
+#    volumes:
+#      - ssl_data:/etc/resty-auto-ssl
+#    environment:
+#      ALLOWED_DOMAINS: 'djkhgvkjsrvjks.duckdns.org'
+#      SITES: 'djkhgvkjsrvjks.duckdns.org=site:80'
+#
+#  site:
+#    image: nginx
+#
+#volumes:
+#  ssl_data:
+#
+#networks:
+#  selfxray:
+#    driver:  bridge
+#    enable_ipv6: false
+#
