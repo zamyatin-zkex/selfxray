@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  xray:
+    image: ghcr.io/xtls/xray-core:latest
+    container_name: XRay
+    restart: unless-stopped
+    volumes:
+      - ./data/v2ray/config.json:/usr/local/etc/xray/config.json:ro
+    ports:
+      - "443:443/tcp"
+    networks:
+      selfxray:
+
+
+
+  ssl-proxy:
+    image: valian/docker-nginx-auto-ssl
+    restart: on-failure
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ssl_data:/etc/resty-auto-ssl
+    environment:
+      ALLOWED_DOMAINS: 'djkhgvkjsrvjks.duckdns.org'
+      SITES: 'djkhgvkjsrvjks.duckdns.org=site:80'
+
+  site:
+    image: nginx
+
+volumes:
+  ssl_data:
+
+networks:
+  selfxray:
+
+

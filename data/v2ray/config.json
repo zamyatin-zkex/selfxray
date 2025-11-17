@@ -1,0 +1,38 @@
+{
+  "log": { "loglevel": "debug" },
+  "inbounds": [
+    {
+      "tag": "vless-reality-inbound",
+      "listen": "0.0.0.0",
+      "port": 443,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "abb9e433-3356-4758-9a0c-df7e74dbb4eb",
+            "flow": "xtls-rprx-vision"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "dest": "djkhgvkjsrvjks.duckdns.org:443",
+          "xver": 0,
+          "serverNames": ["djkhgvkjsrvjks.duckdns.org"],
+          "privateKey": "", // THE PRIVATE KEY YOU GENERATED EARLIER.
+          "shortIds": [""] // THE SHORTID YOU GENERATED EARLIER.
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "direct-outbound",
+      "protocol": "freedom"
+    }
+  ]
+}
