@@ -23,8 +23,8 @@
           "dest": "djkhgvkjsrvjks.duckdns.org:443",
           "xver": 0,
           "serverNames": ["djkhgvkjsrvjks.duckdns.org"],
-          "privateKey": "", // THE PRIVATE KEY YOU GENERATED EARLIER.
-          "shortIds": [""] // THE SHORTID YOU GENERATED EARLIER.
+          "privateKey": "",
+          "shortIds": [""]
         }
       }
     }
