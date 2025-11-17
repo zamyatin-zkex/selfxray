@@ -1,16 +1,16 @@
 version: "3"
 
 services:
-  xray:
-    image: ghcr.io/xtls/xray-core:latest
-    container_name: XRay
-    restart: unless-stopped
-    volumes:
-      - ./data/v2ray/config.json:/usr/local/etc/xray/config.json:ro
-    ports:
-      - "443:443/tcp"
-    networks:
-      selfxray:
+#  xray:
+#    image: ghcr.io/xtls/xray-core:latest
+#    container_name: XRay
+#    restart: unless-stopped
+#    volumes:
+#      - ./data/v2ray/config.json:/usr/local/etc/xray/config.json:ro
+#    ports:
+#      - "443:443/tcp"
+#    networks:
+#      selfxray:
 
 
 
