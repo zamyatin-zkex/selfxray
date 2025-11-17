@@ -34,5 +34,6 @@ volumes:
 
 networks:
   selfxray:
-
+    driver:  bridge
+    enable_ipv6: false
 
