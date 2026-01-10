@@ -57,6 +57,9 @@ services:
 
   site:
     image: nginx
+#    todo move 80 to proxy
+    ports:
+      - 80:80
 
 volumes:
   ssl_data:
